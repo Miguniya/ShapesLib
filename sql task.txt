@@ -1,0 +1,14 @@
+TABLE Product(
+	Id PRIMARY KEY,
+	Name
+	CategoryId FOREIGN KEY
+);
+
+TABLE Category(
+	Id PRIMARY KEY,
+	Name
+);
+
+SELECT Product.Name, Category.Name FROM Product
+LEFT JOIN Category on Product.CategoryId = Category.Id
+ order by Product.Name, Category.Name
